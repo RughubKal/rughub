@@ -38,7 +38,7 @@ Service: ${formData.service}
 Message:
 ${formData.message}`;
     
-    const mailtoLink = `mailto:info@rughubkalgoorlie.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:admin@rughubkal.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
     
     toast({
@@ -161,10 +161,10 @@ ${formData.message}`;
                       <h3 className="font-semibold text-card-foreground mb-1">Call Us</h3>
                       <p className="text-muted-foreground">For immediate assistance</p>
                       <a 
-                        href="tel:+61891234567" 
+                        href="tel:+61412669532" 
                         className="text-primary font-semibold hover:text-primary-deep transition-colors"
                       >
-                        (08) 9123 4567
+                        0412 669 532
                       </a>
                     </div>
                   </div>
@@ -182,10 +182,10 @@ ${formData.message}`;
                       <h3 className="font-semibold text-card-foreground mb-1">Email Us</h3>
                       <p className="text-muted-foreground">Send us your inquiry</p>
                       <a 
-                        href="mailto:info@rughubkalgoorlie.com.au" 
+                        href="mailto:admin@rughubkal.com.au" 
                         className="text-primary font-semibold hover:text-primary-deep transition-colors"
                       >
-                        info@rughubkalgoorlie.com.au
+                        admin@rughubkal.com.au
                       </a>
                     </div>
                   </div>
@@ -200,9 +200,9 @@ ${formData.message}`;
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-card-foreground mb-1">Service Area</h3>
-                      <p className="text-muted-foreground">Local Kalgoorlie region</p>
-                      <p className="text-sm text-muted-foreground">Pickup & delivery available</p>
+                      <h3 className="font-semibold text-card-foreground mb-1">Visit Us</h3>
+                      <p className="text-muted-foreground">186A Dugan ST</p>
+                      <p className="text-muted-foreground">Kalgoorlie, WA, Australia</p>
                     </div>
                   </div>
                 </CardContent>
@@ -233,9 +233,9 @@ ${formData.message}`;
                   variant="secondary" 
                   size="lg"
                   className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                  onClick={() => window.location.href = 'tel:+61891234567'}
+                  onClick={() => window.location.href = 'tel:+61412669532'}
                 >
-                  Call (08) 9123 4567
+                  Call 0412 669 532
                 </Button>
               </div>
             </div>
