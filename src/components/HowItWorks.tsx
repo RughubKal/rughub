@@ -7,30 +7,30 @@ const HowItWorks = () => {
     {
       number: "01",
       icon: <Phone className="w-8 h-8 text-primary" />,
-      title: "60-Second Free Quote",
-      description: "Call now for instant pricing. No home visit required. We'll tell you exactly what it costs and book your pickup within 24 hours.",
-      action: "FREE quote in under 60 seconds"
+      title: "Book Your Service",
+      description: "Contact us with details about your rugs or bedding. We'll provide a quote and schedule your service.",
+      action: "Call or complete our contact form"
     },
     {
       number: "02", 
       icon: <Truck className="w-8 h-8 text-primary" />,
-      title: "White-Glove Pickup",
-      description: "Our uniformed team arrives exactly on time with protective covering. We handle your expensive items like our own. FREE this week only.",
-      action: "Professional pickup (FREE normally $20)"
+      title: "We Pickup",
+      description: "Our team arrives at your scheduled time to safely collect your items. Optional service for $20.",
+      action: "Safe collection from your home"
     },
     {
       number: "03",
       icon: <Sparkles className="w-8 h-8 text-primary" />,
-      title: "Deep Sanitization Process",
-      description: "Industrial-grade equipment destroys 99.9% of allergens, bacteria, and dust mites. Your items get the hospital-grade cleaning they deserve.",
-      action: "99.9% allergen elimination guaranteed"
+      title: "Professional Clean",
+      description: "Your items receive thorough, professional cleaning using specialized equipment and techniques.",
+      action: "Deep cleaning at our facility"
     },
     {
       number: "04",
       icon: <Home className="w-8 h-8 text-primary" />,
-      title: "Like-New Delivery",
-      description: "Fresh, sanitized items delivered to your door within 3-5 days. If you're not amazed by the results, we'll re-clean for FREE.",
-      action: "100% satisfaction guarantee"
+      title: "Clean Delivery",
+      description: "We return your freshly cleaned items to your home, ready to enjoy again.",
+      action: "Convenient delivery back to you"
     }
   ];
 
@@ -42,14 +42,14 @@ const HowItWorks = () => {
     <section className="section-padding bg-secondary">
       <div className="container mx-auto container-padding">
         <div className="max-w-6xl mx-auto content-spacing-lg animate-fade-in">
-          {/* Header with Social Proof */}
+          {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              How 847+ Kalgoorlie Families Got Their Lives Back
+              How It Works
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The same proven 4-step system that's saved families thousands in replacement costs 
-              and eliminated health risks in their homes. Guaranteed results.
+              Simple, convenient process from start to finish. Professional service 
+              with minimal disruption to your day.
             </p>
           </div>
 
@@ -98,47 +98,44 @@ const HowItWorks = () => {
             ))}
           </div>
 
-          {/* Social Proof & Urgency */}
-          <div className="bg-card rounded-lg p-8 shadow-card border-l-4 border-green-500">
+          {/* Additional Info */}
+          <div className="bg-card rounded-lg p-8 shadow-card">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl font-semibold text-card-foreground mb-4">
-                  "Best Investment We Ever Made" - Sarah M.
+                  Ready to Experience the Difference?
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  "Our $4,000 Persian rug looked ruined. RugHub made it look brand new again. 
-                  The allergies stopped, the smell disappeared, and we saved thousands on replacement. 
-                  I'm telling everyone about this service!"
+                  Join satisfied customers who trust RugHub for their professional 
+                  cleaning needs. Quality service, transparent pricing, and convenient 
+                  pickup & delivery.
                 </p>
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span><strong>847+ families served</strong> in Kalgoorlie</span>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Fast turnaround time</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span><strong>$180,000+ saved</strong> in replacement costs</span>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Fully insured service</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span><strong>Zero damage claims</strong> in 5 years</span>
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span>Satisfaction guaranteed</span>
                   </div>
                 </div>
               </div>
               <div className="text-center">
-                <div className="bg-red-500 text-white p-3 rounded-lg mb-4">
-                  <p className="font-bold">⚡ LIMITED TIME: Only 12 slots left this week</p>
-                </div>
                 <Button 
                   variant="cta" 
                   size="lg"
                   onClick={scrollToContact}
-                  className="w-full sm:w-auto animate-pulse"
+                  className="w-full sm:w-auto"
                 >
-                  Claim Your FREE Pickup Now
+                  Start Your Service Today
                 </Button>
                 <p className="text-sm text-muted-foreground mt-3">
-                  Call within 2 hours • Save $20 • Same week service
+                  Quick response • Fair pricing • Local service
                 </p>
               </div>
             </div>

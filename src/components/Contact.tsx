@@ -51,18 +51,15 @@ ${formData.message}`;
     <section id="contact" className="section-padding bg-background">
       <div className="container mx-auto container-padding">
         <div className="max-w-6xl mx-auto content-spacing-lg animate-fade-in">
-          {/* Urgent Header */}
+          {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Stop The Damage Before It's Too Late
+              Contact RugHub
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Every day you wait, more allergens multiply and expensive items deteriorate. 
-              Get your FREE quote now and secure one of the final 12 pickup slots this week.
+              Ready to book your service or have questions? Get in touch with us today 
+              for a personalized quote and friendly service.
             </p>
-            <div className="mt-4 bg-red-500 text-white p-3 rounded-lg max-w-md mx-auto">
-              <p className="font-bold">⚡ URGENT: Only 12 slots remaining this week!</p>
-            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -70,9 +67,8 @@ ${formData.message}`;
             <Card className="bg-card border-border shadow-card">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-card-foreground">
-                  Get FREE Quote + $20 Pickup Savings
+                  Get Your Quote
                 </CardTitle>
-                <p className="text-sm text-muted-foreground">💰 Save $20 on pickup if you book this week</p>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -144,11 +140,10 @@ ${formData.message}`;
                     type="submit" 
                     variant="cta" 
                     size="lg" 
-                    className="w-full animate-pulse"
+                    className="w-full"
                   >
-                    CLAIM FREE $20 BONUS NOW
+                    Send Inquiry
                   </Button>
-                  <p className="text-xs text-center text-muted-foreground mt-2">🔒 100% Satisfaction Guarantee • No Risk • Free Re-clean if Unsatisfied</p>
                 </form>
               </CardContent>
             </Card>
@@ -230,19 +225,18 @@ ${formData.message}`;
                 </CardContent>
               </Card>
 
-              {/* Urgent Contact */}
-              <div className="bg-gradient-primary rounded-lg p-6 text-primary-foreground text-center border-2 border-yellow-400">
-                <h3 className="text-xl font-semibold mb-2">⚡ FINAL CALL - 12 Slots Left!</h3>
-                <p className="mb-4 opacity-90">Call now to secure your spot + FREE $20 pickup bonus</p>
+              {/* Quick Contact */}
+              <div className="bg-gradient-primary rounded-lg p-6 text-primary-foreground text-center">
+                <h3 className="text-xl font-semibold mb-2">Need Immediate Help?</h3>
+                <p className="mb-4 opacity-90">Call us directly for faster service</p>
                 <Button 
                   variant="secondary" 
                   size="lg"
-                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 animate-bounce"
+                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
                   onClick={() => window.location.href = 'tel:+61891234567'}
                 >
-                  🔥 CALL NOW: (08) 9123 4567
+                  Call (08) 9123 4567
                 </Button>
-                <p className="text-xs mt-2 opacity-75">Call within 2 hours to guarantee same-week service</p>
               </div>
             </div>
           </div>
