@@ -71,9 +71,9 @@ const Navigation = () => {
             variant="cta"
             size="sm"
             onClick={() => scrollToSection("contact")}
-            className="absolute right-0 hidden md:block animate-glow-pulse"
+            className="absolute right-0 hidden md:block"
           >
-            Get Quote
+            Call Now
           </Button>
 
           {/* Mobile Menu Toggle */}
@@ -107,7 +107,7 @@ const Navigation = () => {
                   onClick={() => scrollToSection("contact")}
                   className="w-full"
                 >
-                  Get Quote
+                  Call Now
                 </Button>
               </div>
             </div>
