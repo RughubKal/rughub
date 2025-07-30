@@ -1,21 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Star } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
-
 const Hero = () => {
   const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center bg-hero-bg text-hero-foreground overflow-hidden">
+  return <section className="relative min-h-screen flex items-center bg-hero-bg text-hero-foreground overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Professional rug cleaning service" 
-          className="w-full h-full object-cover opacity-20"
-        />
+        <img src={heroImage} alt="Professional rug cleaning service" className="w-full h-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-gradient-hero"></div>
       </div>
 
@@ -62,20 +57,12 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                variant="hero" 
-                size="lg"
-                onClick={scrollToContact}
-                className="w-full sm:w-auto animate-float"
-              >
+              <Button variant="hero" size="lg" onClick={scrollToContact} className="w-full sm:w-auto animate-float">
                 Get A Quote Today
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="w-full sm:w-auto border-hero-foreground/30 text-hero-foreground hover:bg-hero-foreground/10 hover:scale-105 transition-all duration-300"
-                onClick={() => document.getElementById('what-we-do')?.scrollIntoView({ behavior: 'smooth' })}
-              >
+              <Button variant="outline" size="lg" className="w-full sm:w-auto border-hero-foreground/30 text-hero-foreground hover:bg-hero-foreground/10 hover:scale-105 transition-all duration-300" onClick={() => document.getElementById('what-we-do')?.scrollIntoView({
+              behavior: 'smooth'
+            })}>
                 Learn More
               </Button>
             </div>
@@ -92,12 +79,8 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-hero-foreground/60 animate-bounce">
-        <div className="w-6 h-10 border-2 border-hero-foreground/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-hero-foreground/50 rounded-full mt-2"></div>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
