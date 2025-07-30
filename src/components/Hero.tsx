@@ -30,48 +30,50 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Tagline */}
+            {/* Headline with Problem Hook */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 leading-tight">
-              Kalgoorlie's Rug & Bedding Cleaning Specialists
+              Stop Sleeping on Thousands of Dust Mites and Allergens
             </h2>
 
             <p className="text-lg sm:text-xl text-hero-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Professional, affordable, and convenient cleaning for your home's comfort items.
+              Your expensive rugs and bedding are harboring invisible threats to your family's health. 
+              Get professional deep cleaning that removes what home washing can't touch.
             </p>
 
-            {/* Trust Indicators */}
+            {/* Urgency & Social Proof */}
             <div className="flex flex-wrap justify-center items-center gap-6 mb-10 text-sm sm:text-base">
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-primary fill-primary" />
-                <span>Professional Service</span>
+                <span>97% Customer Satisfaction</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>Local Kalgoorlie</span>
+                <span>Same-Week Service</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-primary" />
-                <span>Pick-up & Delivery</span>
+                <span>100% Satisfaction Guarantee</span>
               </div>
             </div>
 
-            {/* CTAs */}
+            {/* Urgent CTAs */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button variant="hero" size="lg" onClick={scrollToContact} className="w-full sm:w-auto animate-float">
-                Get A Quote Today
+                Get FREE Quote in 60 Seconds
               </Button>
               <Button variant="outline" size="lg" className="w-full sm:w-auto border-hero-foreground/30 text-hero-foreground hover:bg-hero-foreground/10 hover:scale-105 transition-all duration-300" onClick={() => document.getElementById('what-we-do')?.scrollIntoView({
               behavior: 'smooth'
             })}>
-                Learn More
+                See The Hidden Dangers
               </Button>
             </div>
 
-            {/* Pricing Highlight */}
+            {/* Value Stack with Urgency */}
             <div className="mt-3xl p-8 bg-hero-foreground/10 backdrop-blur-sm rounded-xl border border-hero-foreground/20 max-w-md mx-auto hover:bg-hero-foreground/15 transition-all duration-300">
-              <p className="text-lg font-semibold text-primary mb-2">Starting from</p>
+              <p className="text-lg font-semibold text-primary mb-2">Limited Time Offer</p>
               <p className="text-3xl font-bold mb-1">$38.50<span className="text-lg font-normal"> per sqm</span></p>
-              <p className="text-sm text-hero-foreground/70">+ Optional pickup & delivery $20</p>
+              <p className="text-sm text-hero-foreground/70 mb-3">+ FREE pickup & delivery (normally $20)</p>
+              <p className="text-xs text-primary font-medium bg-primary/20 rounded-full px-3 py-1 inline-block">⚡ Book this week - Save $20!</p>
             </div>
           </div>
         </div>
