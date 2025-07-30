@@ -48,9 +48,9 @@ ${formData.message}`;
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+    <section id="contact" className="section-padding bg-background">
+      <div className="container mx-auto container-padding">
+        <div className="max-w-6xl mx-auto content-spacing-lg animate-fade-in">
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">

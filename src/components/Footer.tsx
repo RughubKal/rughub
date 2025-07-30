@@ -4,9 +4,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-hero-bg text-hero-foreground py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+    <footer className="bg-hero-bg text-hero-foreground py-3xl">
+      <div className="container mx-auto container-padding">
+        <div className="max-w-6xl mx-auto content-spacing-lg">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Brand Section */}
             <div className="space-y-4">

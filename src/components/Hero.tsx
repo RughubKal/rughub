@@ -21,7 +21,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto container-padding">
           <div className="max-w-4xl mx-auto text-center">
             {/* Logo/Brand */}
             <div className="mb-8">
@@ -61,19 +61,19 @@ const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button 
                 variant="hero" 
                 size="lg"
                 onClick={scrollToContact}
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto animate-float"
               >
                 Get A Quote Today
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="w-full sm:w-auto border-hero-foreground/30 text-hero-foreground hover:bg-hero-foreground/10"
+                className="w-full sm:w-auto border-hero-foreground/30 text-hero-foreground hover:bg-hero-foreground/10 hover:scale-105 transition-all duration-300"
                 onClick={() => document.getElementById('what-we-do')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More
@@ -81,7 +81,7 @@ const Hero = () => {
             </div>
 
             {/* Pricing Highlight */}
-            <div className="mt-12 p-6 bg-hero-foreground/10 backdrop-blur-sm rounded-lg border border-hero-foreground/20 max-w-md mx-auto">
+            <div className="mt-3xl p-8 bg-hero-foreground/10 backdrop-blur-sm rounded-xl border border-hero-foreground/20 max-w-md mx-auto hover:bg-hero-foreground/15 transition-all duration-300">
               <p className="text-lg font-semibold text-primary mb-2">Starting from</p>
               <p className="text-3xl font-bold mb-1">$38.50<span className="text-lg font-normal"> per sqm</span></p>
               <p className="text-sm text-hero-foreground/70">+ Optional pickup & delivery $20</p>
