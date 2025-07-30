@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import WhatWeDo from "@/components/WhatWeDo";
 import OurOffer from "@/components/OurOffer";
-import WhyItMatters from "@/components/WhyItMatters";
+import AboutUs from "@/components/AboutUs";
 import HowItWorks from "@/components/HowItWorks";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -21,7 +21,7 @@ const Index = () => {
         <OurOffer />
       </section>
       <section id="why-it-matters">
-        <WhyItMatters />
+        <AboutUs />
       </section>
       <section id="how-it-works">
         <HowItWorks />
