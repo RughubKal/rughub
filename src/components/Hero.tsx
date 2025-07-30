@@ -60,11 +60,7 @@ const Hero = () => {
               <Button variant="hero" size="lg" onClick={scrollToContact} className="w-full sm:w-auto animate-float">
                 Get A Quote Today
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto border-hero-foreground/30 text-hero-foreground hover:bg-hero-foreground/10 hover:scale-105 transition-all duration-300" onClick={() => document.getElementById('what-we-do')?.scrollIntoView({
-              behavior: 'smooth'
-            })}>
-                Learn More
-              </Button>
+              
             </div>
 
             {/* Pricing Highlight */}
