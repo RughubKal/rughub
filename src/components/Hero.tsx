@@ -37,12 +37,11 @@ const Hero = () => {
 
             {/* Tagline */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 leading-tight">
-              Professional Rug Cleaning & Heavy Bedding Services
+              Kalgoorlie's Rug & Bedding Cleaning Specialists
             </h2>
 
             <p className="text-lg sm:text-xl text-hero-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Transform your rugs and heavy bedding with our professional cleaning service. 
-              From Persian rugs to thick quilts, we handle what your home washing machine can't.
+              Professional, affordable, and convenient cleaning for your home's comfort items.
             </p>
 
             {/* Trust Indicators */}
