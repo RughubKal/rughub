@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Truck, Calculator, Clock, Star, Bed, Package, Sheet } from "lucide-react";
+import { Truck, Calculator, Clock, Star, Bed, Package, Square } from "lucide-react";
 
 const OurOffer = () => {
   const scrollToContact = () => {
@@ -193,7 +193,7 @@ const OurOffer = () => {
                   <AccordionItem value="blankets">
                     <AccordionTrigger className="text-left">
                       <div className="flex items-center gap-2">
-                        <Sheet className="w-4 h-4" />
+                        <Square className="w-4 h-4" />
                         Blankets/Comforters
                       </div>
                     </AccordionTrigger>
