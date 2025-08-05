@@ -1,7 +1,40 @@
-import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Users } from "lucide-react";
+import { useState, useEffect } from "react";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-hero-bg text-hero-foreground py-3xl">
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+  return <footer className="bg-hero-bg text-hero-foreground py-3xl relative">
+      {/* Walk-ins Welcome Popup */}
+      <div 
+        className={`fixed bottom-4 right-4 z-50 transition-all duration-500 transform ${
+          showPopup ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-4 opacity-0 scale-95'
+        }`}
+      >
+        <div className="bg-primary text-primary-foreground px-6 py-4 rounded-lg shadow-elegant flex items-center gap-3 max-w-xs">
+          <Users className="w-5 h-5 flex-shrink-0" />
+          <div>
+            <p className="font-semibold text-sm">Walk-ins Welcome!</p>
+            <p className="text-xs opacity-90">No appointment needed</p>
+          </div>
+          <button 
+            onClick={() => setShowPopup(false)}
+            className="ml-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+            aria-label="Close popup"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+      
       <div className="container mx-auto container-padding">
         <div className="max-w-6xl mx-auto content-spacing-lg">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
