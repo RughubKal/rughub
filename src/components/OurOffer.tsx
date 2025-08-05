@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Truck, Calculator, Clock, Star } from "lucide-react";
+import { Truck, Calculator, Clock, Star, Bed } from "lucide-react";
 
 const OurOffer = () => {
   const scrollToContact = () => {
@@ -23,7 +23,7 @@ const OurOffer = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {/* Pricing Card */}
             <Card className="bg-card border-border shadow-card">
               <CardHeader className="text-center pb-6">
@@ -113,6 +113,59 @@ const OurOffer = () => {
                     <div>✓ Professional transport</div>
                     <div>✓ Clean delivery back to you</div>
                     <div>✓ Flexible scheduling</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Bedding Washing Card */}
+            <Card className="bg-card border-border shadow-card">
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-2xl font-bold text-card-foreground">
+                  Bedding Washing
+                </CardTitle>
+                <Badge variant="secondary" className="mx-auto">
+                  Fixed Pricing
+                </Badge>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-primary mb-2">
+                    $25
+                  </div>
+                  <p className="text-muted-foreground">per item</p>
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Bed className="w-5 h-5 text-primary" />
+                    <span className="text-sm text-muted-foreground">Sheets, pillowcases & covers</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Clock className="w-5 h-5 text-primary" />
+                    <span className="text-sm text-muted-foreground">Professional wash & dry</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Star className="w-5 h-5 text-primary" />
+                    <span className="text-sm text-muted-foreground">Hygienic & fresh results</span>
+                  </div>
+                </div>
+
+                <div className="bg-muted rounded-lg p-4">
+                  <h4 className="font-semibold text-foreground mb-2">Popular Items:</h4>
+                  <div className="space-y-1 text-sm text-muted-foreground">
+                    <div className="flex justify-between">
+                      <span>Sheet set (fitted + flat):</span>
+                      <span className="font-semibold">$25.00</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Pillowcase pair:</span>
+                      <span className="font-semibold">$25.00</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Duvet cover:</span>
+                      <span className="font-semibold">$25.00</span>
+                    </div>
                   </div>
                 </div>
               </CardContent>
