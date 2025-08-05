@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Truck, Calculator, Clock, Star, Bed } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Truck, Calculator, Clock, Star, Bed, Package, Sheet } from "lucide-react";
 
 const OurOffer = () => {
   const scrollToContact = () => {
@@ -131,42 +132,129 @@ const OurOffer = () => {
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-primary mb-2">
-                    $25
+                    From $20
                   </div>
                   <p className="text-muted-foreground">per item</p>
                 </div>
                 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <Bed className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">Sheets, pillowcases & covers</span>
+                    <Package className="w-5 h-5 text-primary" />
+                    <span className="text-sm text-muted-foreground">Hygiene wash, dry, fold & packaging</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">Professional wash & dry</span>
+                    <span className="text-sm text-muted-foreground">All prices include GST</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Star className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">Hygienic & fresh results</span>
+                    <Truck className="w-5 h-5 text-primary" />
+                    <span className="text-sm text-muted-foreground">Pickup & delivery: $20</span>
                   </div>
                 </div>
 
-                <div className="bg-muted rounded-lg p-4">
-                  <h4 className="font-semibold text-foreground mb-2">Popular Items:</h4>
-                  <div className="space-y-1 text-sm text-muted-foreground">
-                    <div className="flex justify-between">
-                      <span>Sheet set (fitted + flat):</span>
-                      <span className="font-semibold">$25.00</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Pillowcase pair:</span>
-                      <span className="font-semibold">$25.00</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Duvet cover:</span>
-                      <span className="font-semibold">$25.00</span>
-                    </div>
-                  </div>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="doonas">
+                    <AccordionTrigger className="text-left">
+                      <div className="flex items-center gap-2">
+                        <Bed className="w-4 h-4" />
+                        Doonas/Duvet & Mattress Toppers
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between py-1">
+                          <span>Single</span>
+                          <span className="font-semibold">$20.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>King Single</span>
+                          <span className="font-semibold">$25.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>Double</span>
+                          <span className="font-semibold">$35.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>Queen</span>
+                          <span className="font-semibold">$40.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>King</span>
+                          <span className="font-semibold">$45.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>Super King</span>
+                          <span className="font-semibold">$50.00</span>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="blankets">
+                    <AccordionTrigger className="text-left">
+                      <div className="flex items-center gap-2">
+                        <Sheet className="w-4 h-4" />
+                        Blankets/Comforters
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between py-1">
+                          <span>Throw/Lap</span>
+                          <span className="font-semibold">$20.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>Single</span>
+                          <span className="font-semibold">$25.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>Double</span>
+                          <span className="font-semibold">$35.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>Queen</span>
+                          <span className="font-semibold">$40.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>King</span>
+                          <span className="font-semibold">$45.00</span>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="weighted">
+                    <AccordionTrigger className="text-left">
+                      <div className="flex items-center gap-2">
+                        <Star className="w-4 h-4" />
+                        Weighted Blankets
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between py-1">
+                          <span>2-4kg</span>
+                          <span className="font-semibold">$35.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>5-7kg</span>
+                          <span className="font-semibold">$45.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>8-10kg</span>
+                          <span className="font-semibold">$55.00</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span>11kg+</span>
+                          <span className="font-semibold">$65.00</span>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                <div className="bg-muted rounded-lg p-3 text-xs text-muted-foreground text-center">
+                  All prices include Hygiene Wash, Dry, Fold & Packaging
                 </div>
               </CardContent>
             </Card>
