@@ -7,7 +7,7 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="relative min-h-screen flex items-center bg-hero-bg text-hero-foreground overflow-hidden">
+  return <section className="relative min-h-screen flex items-center bg-hero-bg text-hero-foreground overflow-hidden pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={heroImage} alt="Professional rug cleaning service" className="w-full h-full object-cover opacity-20" />
