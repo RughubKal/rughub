@@ -16,7 +16,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 w-full">
-        <div className="container mx-auto container-padding">
+        <div className="container mx-auto container-padding py-[20px]">
           <div className="max-w-4xl mx-auto text-center">
             {/* Logo/Brand */}
             <div className="mb-8">
