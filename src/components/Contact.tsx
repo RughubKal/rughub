@@ -126,12 +126,8 @@ ${formData.message}`;
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="rug-cleaning">Rug Cleaning</SelectItem>
-                        <SelectItem value="bedding-washing">Bedding Washing</SelectItem>
-                        <SelectItem value="doona-cleaning">Doona Cleaning</SelectItem>
-                        <SelectItem value="pillow-cleaning">Pillow Cleaning</SelectItem>
-                        <SelectItem value="blanket-cleaning">Blanket Cleaning</SelectItem>
-                        <SelectItem value="curtain-cleaning">Curtain Cleaning</SelectItem>
+                        <SelectItem value="rugs">Rugs</SelectItem>
+                        <SelectItem value="bedding">Bedding</SelectItem>
                         <SelectItem value="general-inquiry">General Inquiry</SelectItem>
                       </SelectContent>
                     </Select>
