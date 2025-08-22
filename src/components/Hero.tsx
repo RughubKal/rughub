@@ -66,7 +66,7 @@ const Hero = () => {
             {/* Pricing Highlight */}
             <div className="mt-3xl p-8 bg-hero-foreground/10 backdrop-blur-sm rounded-xl border border-hero-foreground/20 max-w-md mx-auto hover:bg-hero-foreground/15 transition-all duration-300">
               <p className="text-lg font-semibold text-primary mb-2">Starting from</p>
-              <p className="text-3xl font-bold mb-1">$38.50<span className="text-lg font-normal"> per sqm</span></p>
+              <p className="text-3xl font-bold mb-1">$25<span className="text-lg font-normal"> per sqm</span></p>
               <p className="text-sm text-hero-foreground/70">+ Optional pickup & delivery $20</p>
             </div>
           </div>
