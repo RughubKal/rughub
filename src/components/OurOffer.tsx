@@ -37,7 +37,7 @@ const OurOffer = () => {
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-primary mb-2">
-                    $38.50
+                    $25
                   </div>
                   <p className="text-muted-foreground">per square meter</p>
                 </div>
@@ -62,11 +62,11 @@ const OurOffer = () => {
                   <div className="space-y-1 text-sm text-muted-foreground">
                     <div className="flex justify-between">
                       <span>2m × 3m rug:</span>
-                      <span className="font-semibold">$231.00</span>
+                      <span className="font-semibold">$150.00</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Queen doona (2.2m × 2.4m):</span>
-                      <span className="font-semibold">$203.28</span>
+                      <span className="font-semibold">$132.00</span>
                     </div>
                   </div>
                 </div>
