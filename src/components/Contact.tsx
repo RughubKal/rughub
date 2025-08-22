@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
@@ -22,6 +23,13 @@ const Contact = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
+    }));
+  };
+
+  const handleSelectChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      service: value
     }));
   };
 
@@ -113,14 +121,20 @@ ${formData.message}`;
 
                   <div className="space-y-2">
                     <Label htmlFor="service">Service Required</Label>
-                    <Input
-                      id="service"
-                      name="service"
-                      placeholder="e.g., Rug cleaning, Doona washing, etc."
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="bg-input border-border"
-                    />
+                    <Select value={formData.service} onValueChange={handleSelectChange}>
+                      <SelectTrigger className="bg-input border-border">
+                        <SelectValue placeholder="Select a service" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="rug-cleaning">Rug Cleaning</SelectItem>
+                        <SelectItem value="bedding-washing">Bedding Washing</SelectItem>
+                        <SelectItem value="doona-cleaning">Doona Cleaning</SelectItem>
+                        <SelectItem value="pillow-cleaning">Pillow Cleaning</SelectItem>
+                        <SelectItem value="blanket-cleaning">Blanket Cleaning</SelectItem>
+                        <SelectItem value="curtain-cleaning">Curtain Cleaning</SelectItem>
+                        <SelectItem value="general-inquiry">General Inquiry</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   <div className="space-y-2">
