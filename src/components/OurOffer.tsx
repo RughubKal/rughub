@@ -128,7 +128,7 @@ const OurOffer = () => {
                   <div className="text-5xl font-bold text-primary mb-2">
                     $25
                   </div>
-                  <p className="text-muted-foreground">starting from</p>
+                  <p className="text-muted-foreground">per item</p>
                 </div>
                 
                 <div className="space-y-3">
@@ -138,11 +138,11 @@ const OurOffer = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">Professional wash & dry</span>
+                    <span className="text-sm text-muted-foreground">8 hour turnaround if delivered by 8am</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Star className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">Hygienic & fresh results</span>
+                    <span className="text-sm text-muted-foreground">Professional wash & dry</span>
                   </div>
                 </div>
 
@@ -150,18 +150,16 @@ const OurOffer = () => {
                   <h4 className="font-semibold text-foreground mb-2">Popular Items:</h4>
                   <div className="space-y-1 text-sm text-muted-foreground">
                     <div className="flex justify-between">
-                      <span>Queen Doona:
-                    </span>
-                      <span className="font-semibold">$55</span>
+                      <span>Sheet set (fitted + flat):</span>
+                      <span className="font-semibold">$25.00</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>King Topper:</span>
-                      <span className="font-semibold">$60</span>
+                      <span>Pillowcase pair:</span>
+                      <span className="font-semibold">$25.00</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Super King Doona:</span>
-                      <span className="font-semibold">$65
-                    </span>
+                      <span>Duvet cover:</span>
+                      <span className="font-semibold">$25.00</span>
                     </div>
                   </div>
                 </div>
