@@ -2,14 +2,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Truck, Calculator, Clock, Star, Bed } from "lucide-react";
-
 const OurOffer = () => {
   const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="section-padding bg-secondary">
+  return <section className="section-padding bg-secondary">
       <div className="container mx-auto container-padding">
         <div className="max-w-6xl mx-auto content-spacing-lg animate-fade-in">
           {/* Header */}
@@ -61,7 +60,7 @@ const OurOffer = () => {
                   <h4 className="font-semibold text-foreground mb-2">Example Pricing:</h4>
                   <div className="space-y-1 text-sm text-muted-foreground">
                     <div className="flex justify-between">
-                      <span>2m × 3m rug:</span>
+                      <span>2m × 3m synthetic rug:</span>
                       <span className="font-semibold">$150.00</span>
                     </div>
                   </div>
@@ -177,20 +176,13 @@ const OurOffer = () => {
               <p className="text-lg mb-6 opacity-90">
                 Contact us for a personalized quote based on your specific items.
               </p>
-              <Button 
-                variant="secondary" 
-                size="lg"
-                onClick={scrollToContact}
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-              >
+              <Button variant="secondary" size="lg" onClick={scrollToContact} className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                 Get Your Quote
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default OurOffer;
