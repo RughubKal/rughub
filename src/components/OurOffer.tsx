@@ -128,7 +128,7 @@ const OurOffer = () => {
                   <div className="text-5xl font-bold text-primary mb-2">
                     $25
                   </div>
-                  <p className="text-muted-foreground">per item</p>
+                  <p className="text-muted-foreground">starting price</p>
                 </div>
                 
                 <div className="space-y-3">
