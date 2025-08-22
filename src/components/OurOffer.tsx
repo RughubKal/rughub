@@ -138,7 +138,7 @@ const OurOffer = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">8 hour turnaround if delivered by 8am</span>
+                    <span className="text-sm text-muted-foreground">Same day turnaround if dropped off before 9am</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Star className="w-5 h-5 text-primary" />
