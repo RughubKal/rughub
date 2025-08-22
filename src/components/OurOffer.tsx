@@ -64,10 +64,6 @@ const OurOffer = () => {
                       <span>2m × 3m rug:</span>
                       <span className="font-semibold">$150.00</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Queen doona (2.2m × 2.4m):</span>
-                      <span className="font-semibold">$132.00</span>
-                    </div>
                   </div>
                 </div>
               </CardContent>
