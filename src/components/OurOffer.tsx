@@ -119,14 +119,9 @@ const OurOffer = () => {
                 <CardTitle className="text-2xl font-bold text-card-foreground">
                   Bedding Washing
                 </CardTitle>
-                <div className="flex flex-col gap-2">
-                  <Badge variant="secondary" className="mx-auto">
-                    Fixed Pricing
-                  </Badge>
-                  <Badge variant="outline" className="mx-auto">
-                    Loan Doonas Available
-                  </Badge>
-                </div>
+                <Badge variant="secondary" className="mx-auto">
+                  Fixed Pricing
+                </Badge>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="text-center">
@@ -167,6 +162,12 @@ const OurOffer = () => {
                       <span className="font-semibold">$25.00</span>
                     </div>
                   </div>
+                </div>
+
+                <div className="text-center">
+                  <Badge variant="outline" className="mx-auto">
+                    Loan Doonas Available
+                  </Badge>
                 </div>
               </CardContent>
             </Card>
