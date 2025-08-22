@@ -127,7 +127,7 @@ ${formData.message}`;
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="rugs">Rugs</SelectItem>
-                        <SelectItem value="bedding">Bedding</SelectItem>
+                        <SelectItem value="bedding">bedding</SelectItem>
                         <SelectItem value="general-inquiry">General Inquiry</SelectItem>
                       </SelectContent>
                     </Select>
