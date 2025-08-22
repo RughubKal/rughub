@@ -61,7 +61,7 @@ const OurOffer = () => {
                   <div className="space-y-1 text-sm text-muted-foreground">
                     <div className="flex justify-between">
                       <span>2m × 3m synthetic rug:</span>
-                      <span className="font-semibold">$150.00</span>
+                      <span className="font-semibold">$150</span>
                     </div>
                   </div>
                 </div>
@@ -150,16 +150,16 @@ const OurOffer = () => {
                   <h4 className="font-semibold text-foreground mb-2">Popular Items:</h4>
                   <div className="space-y-1 text-sm text-muted-foreground">
                     <div className="flex justify-between">
-                      <span>Sheet set (fitted + flat):</span>
-                      <span className="font-semibold">$40.00</span>
+                      <span>Queen Doona:</span>
+                      <span className="font-semibold">$55</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Pillowcase pair:</span>
-                      <span className="font-semibold">$40.00</span>
+                      <span>King Topper:</span>
+                      <span className="font-semibold">$60</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Duvet cover:</span>
-                      <span className="font-semibold">$40.00</span>
+                      <span>Super King Doona:</span>
+                      <span className="font-semibold">$65</span>
                     </div>
                   </div>
                 </div>
