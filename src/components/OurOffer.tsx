@@ -126,9 +126,9 @@ const OurOffer = () => {
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-primary mb-2">
-                    $25
+                    $40
                   </div>
-                  <p className="text-muted-foreground">from</p>
+                  <p className="text-muted-foreground">per item</p>
                 </div>
                 
                 <div className="space-y-3">
@@ -151,15 +151,15 @@ const OurOffer = () => {
                   <div className="space-y-1 text-sm text-muted-foreground">
                     <div className="flex justify-between">
                       <span>Sheet set (fitted + flat):</span>
-                      <span className="font-semibold">$25.00</span>
+                      <span className="font-semibold">$40.00</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Pillowcase pair:</span>
-                      <span className="font-semibold">$25.00</span>
+                      <span className="font-semibold">$40.00</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Duvet cover:</span>
-                      <span className="font-semibold">$25.00</span>
+                      <span className="font-semibold">$40.00</span>
                     </div>
                   </div>
                 </div>
