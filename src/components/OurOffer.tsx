@@ -17,13 +17,11 @@ const OurOffer = () => {
     if (!l || !w || l <= 0 || w <= 0) return null;
     
     const sqm = l * w;
-    const minPrice = sqm * 38.5; // HEATSET SYNTHETIC
-    const maxPrice = sqm * 50.0; // NATURAL FIBRE
+    const price = sqm * 25; // $25 per sqm base rate
     
     return {
       sqm: sqm.toFixed(1),
-      minPrice: minPrice.toFixed(0),
-      maxPrice: maxPrice.toFixed(0)
+      price: price.toFixed(0)
     };
   };
 
@@ -59,20 +57,11 @@ const OurOffer = () => {
                 </Badge>
               </CardHeader>
               <CardContent className="space-y-6">
-                {/* Pricing Tiers */}
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">HEATSET SYNTHETIC</span>
-                    <span className="font-semibold text-foreground">$38.50 per sqm</span>
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-primary mb-2">
+                    $25
                   </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Tufted/backed Synthetic</span>
-                    <span className="font-semibold text-foreground">$44.00 per sqm</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">NATURAL FIBRE</span>
-                    <span className="font-semibold text-foreground">$50.00 per sqm</span>
-                  </div>
+                  <p className="text-muted-foreground">starting from per square meter</p>
                 </div>
 
                 {/* Calculator */}
@@ -115,10 +104,10 @@ const OurOffer = () => {
                       </div>
                       <div className="text-center">
                         <div className="text-lg font-bold text-primary">
-                          Between ${calculation.minPrice} - ${calculation.maxPrice}
+                          Estimated: ${calculation.price}
                         </div>
                         <p className="text-xs text-muted-foreground mt-1">
-                          Final price depends on rug material and condition
+                          Based on $25 per sqm starting rate
                         </p>
                       </div>
                     </div>
