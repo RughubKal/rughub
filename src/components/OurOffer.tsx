@@ -5,26 +5,21 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Truck, Calculator, Clock, Star, Bed } from "lucide-react";
 import { useState } from "react";
-
 const OurOffer = () => {
   const [length, setLength] = useState<string>('');
   const [width, setWidth] = useState<string>('');
-
   const calculatePrice = () => {
     const l = parseFloat(length);
     const w = parseFloat(width);
-    
     if (!l || !w || l <= 0 || w <= 0) return null;
-    
     const sqm = l * w;
     const price = sqm * 25; // $25 per sqm base rate
-    
+
     return {
       sqm: sqm.toFixed(1),
       price: price.toFixed(0)
     };
   };
-
   const calculation = calculatePrice();
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({
@@ -61,7 +56,7 @@ const OurOffer = () => {
                   <div className="text-5xl font-bold text-primary mb-2">
                     $25
                   </div>
-                  <p className="text-muted-foreground">starting from per square meter</p>
+                  <p className="text-muted-foreground">starting from</p>
                 </div>
 
                 {/* Calculator */}
@@ -74,30 +69,15 @@ const OurOffer = () => {
                   <div className="grid grid-cols-2 gap-3">
                     <div className="space-y-2">
                       <Label htmlFor="length" className="text-sm">Length (m)</Label>
-                      <Input
-                        id="length"
-                        type="number"
-                        placeholder="2.0"
-                        value={length}
-                        onChange={(e) => setLength(e.target.value)}
-                        className="h-9"
-                      />
+                      <Input id="length" type="number" placeholder="2.0" value={length} onChange={e => setLength(e.target.value)} className="h-9" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="width" className="text-sm">Width (m)</Label>
-                      <Input
-                        id="width"
-                        type="number"
-                        placeholder="3.0"
-                        value={width}
-                        onChange={(e) => setWidth(e.target.value)}
-                        className="h-9"
-                      />
+                      <Input id="width" type="number" placeholder="3.0" value={width} onChange={e => setWidth(e.target.value)} className="h-9" />
                     </div>
                   </div>
 
-                  {calculation && (
-                    <div className="border-t border-border pt-3 space-y-2">
+                  {calculation && <div className="border-t border-border pt-3 space-y-2">
                       <div className="flex justify-between text-sm">
                         <span className="text-muted-foreground">Square meters:</span>
                         <span className="font-medium">{calculation.sqm} sqm</span>
@@ -110,8 +90,7 @@ const OurOffer = () => {
                           Based on $25 per sqm starting rate
                         </p>
                       </div>
-                    </div>
-                  )}
+                    </div>}
                 </div>
 
                 <div className="space-y-3">
