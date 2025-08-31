@@ -1,8 +1,33 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Truck, Calculator, Clock, Star, Bed } from "lucide-react";
+import { useState } from "react";
+
 const OurOffer = () => {
+  const [length, setLength] = useState<string>('');
+  const [width, setWidth] = useState<string>('');
+
+  const calculatePrice = () => {
+    const l = parseFloat(length);
+    const w = parseFloat(width);
+    
+    if (!l || !w || l <= 0 || w <= 0) return null;
+    
+    const sqm = l * w;
+    const minPrice = sqm * 38.5; // HEATSET SYNTHETIC
+    const maxPrice = sqm * 50.0; // NATURAL FIBRE
+    
+    return {
+      sqm: sqm.toFixed(1),
+      minPrice: minPrice.toFixed(0),
+      maxPrice: maxPrice.toFixed(0)
+    };
+  };
+
+  const calculation = calculatePrice();
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({
       behavior: 'smooth'
@@ -23,7 +48,7 @@ const OurOffer = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            {/* Pricing Card */}
+            {/* Pricing Calculator Card */}
             <Card className="bg-card border-border shadow-card">
               <CardHeader className="text-center pb-6">
                 <CardTitle className="text-2xl font-bold text-card-foreground">
@@ -34,18 +59,73 @@ const OurOffer = () => {
                 </Badge>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-primary mb-2">
-                    $25
+                {/* Pricing Tiers */}
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">HEATSET SYNTHETIC</span>
+                    <span className="font-semibold text-foreground">$38.50 per sqm</span>
                   </div>
-                  <p className="text-muted-foreground">per square meter</p>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">Tufted/backed Synthetic</span>
+                    <span className="font-semibold text-foreground">$44.00 per sqm</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">NATURAL FIBRE</span>
+                    <span className="font-semibold text-foreground">$50.00 per sqm</span>
+                  </div>
                 </div>
-                
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Calculator className="w-5 h-5 text-primary" />
-                    <span className="text-sm text-muted-foreground">Easy calculation: length × width</span>
+
+                {/* Calculator */}
+                <div className="bg-muted rounded-lg p-4 space-y-4">
+                  <h4 className="font-semibold text-foreground flex items-center gap-2">
+                    <Calculator className="w-4 h-4 text-primary" />
+                    Price Calculator
+                  </h4>
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="space-y-2">
+                      <Label htmlFor="length" className="text-sm">Length (m)</Label>
+                      <Input
+                        id="length"
+                        type="number"
+                        placeholder="2.0"
+                        value={length}
+                        onChange={(e) => setLength(e.target.value)}
+                        className="h-9"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="width" className="text-sm">Width (m)</Label>
+                      <Input
+                        id="width"
+                        type="number"
+                        placeholder="3.0"
+                        value={width}
+                        onChange={(e) => setWidth(e.target.value)}
+                        className="h-9"
+                      />
+                    </div>
                   </div>
+
+                  {calculation && (
+                    <div className="border-t border-border pt-3 space-y-2">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-muted-foreground">Square meters:</span>
+                        <span className="font-medium">{calculation.sqm} sqm</span>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-lg font-bold text-primary">
+                          Between ${calculation.minPrice} - ${calculation.maxPrice}
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Final price depends on rug material and condition
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Clock className="w-5 h-5 text-primary" />
                     <span className="text-sm text-muted-foreground">Professional cleaning & care</span>
@@ -53,16 +133,6 @@ const OurOffer = () => {
                   <div className="flex items-center gap-3">
                     <Star className="w-5 h-5 text-primary" />
                     <span className="text-sm text-muted-foreground">All rug types & heavy bedding</span>
-                  </div>
-                </div>
-
-                <div className="bg-muted rounded-lg p-4">
-                  <h4 className="font-semibold text-foreground mb-2">Example Pricing:</h4>
-                  <div className="space-y-1 text-sm text-muted-foreground">
-                    <div className="flex justify-between">
-                      <span>2m × 3m synthetic rug:</span>
-                      <span className="font-semibold">$150</span>
-                    </div>
                   </div>
                 </div>
               </CardContent>
