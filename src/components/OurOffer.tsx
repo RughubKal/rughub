@@ -86,9 +86,7 @@ const OurOffer = () => {
                         <div className="text-lg font-bold text-primary">
                           Estimated: ${calculation.price}
                         </div>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          Based on $25 per sqm starting rate
-                        </p>
+                        
                       </div>
                     </div>}
                 </div>
