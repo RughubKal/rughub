@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,12 +16,32 @@ const Contact = () => {
     service: '',
     message: ''
   });
+  // Honeypot fields - invisible to users but visible to bots
+  const [honeypot, setHoneypot] = useState({
+    website: '',
+    url: '',
+    company: ''
+  });
+  const [formStartTime, setFormStartTime] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
+  // Track when the form component mounts
+  useEffect(() => {
+    setFormStartTime(Date.now());
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleHoneypotChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setHoneypot(prev => ({
       ...prev,
       [name]: value
     }));
@@ -39,16 +59,27 @@ const Contact = () => {
     setIsLoading(true);
     
     try {
+      // Calculate form fill time
+      const formFillTime = Date.now() - formStartTime;
+      
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          honeypot,
+          formFillTime
+        }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send email');
+        const errorData = await response.json();
+        if (response.status === 429) {
+          throw new Error('Too many requests. Please wait a few minutes before trying again.');
+        }
+        throw new Error(errorData.error || 'Failed to send email');
       }
 
       const result = await response.json();
@@ -66,12 +97,17 @@ const Contact = () => {
         service: '',
         message: ''
       });
+      setHoneypot({
+        website: '',
+        url: '',
+        company: ''
+      });
 
     } catch (error) {
       console.error('Error sending email:', error);
       toast({
         title: "Failed to send message",
-        description: "Please try again or call us directly.",
+        description: error instanceof Error ? error.message : "Please try again or call us directly.",
         variant: "destructive",
       });
     } finally {
@@ -104,6 +140,34 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot fields - hidden from users */}
+                  <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}>
+                    <input
+                      type="text"
+                      name="website"
+                      value={honeypot.website}
+                      onChange={handleHoneypotChange}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                    <input
+                      type="url"
+                      name="url"
+                      value={honeypot.url}
+                      onChange={handleHoneypotChange}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                    <input
+                      type="text"
+                      name="company"
+                      value={honeypot.company}
+                      onChange={handleHoneypotChange}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+                  
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
