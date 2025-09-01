@@ -215,9 +215,7 @@ const OurOffer = () => {
               <h3 className="text-2xl font-bold mb-4">
                 Ready to Get Started?
               </h3>
-              <p className="text-lg mb-6 opacity-90">
-                Contact us for a personalized quote based on your specific items.
-              </p>
+              <p className="text-lg mb-6 opacity-90">Contact us for a personalised quote based on your specific items.</p>
               <Button variant="secondary" size="lg" onClick={scrollToContact} className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                 Get Your Quote
               </Button>
