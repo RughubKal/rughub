@@ -15,8 +15,8 @@ const WhatWeDo = () => {
     description: "Professional-grade equipment removes deep-set dirt, allergens, and odours that regular cleaning can't reach."
   }, {
     icon: <Shield className="w-8 h-8 text-primary" />,
-    title: "Fiber Protection",
-    description: "Specialized techniques for delicate materials. We protect your investment with proper care methods."
+    title: "Fibre Protection",
+    description: "Specialised techniques for delicate materials. We protect your investment with proper care methods."
   }];
   return <section id="what-we-do" className="section-padding bg-background">
       <div className="container mx-auto container-padding">

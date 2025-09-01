@@ -22,7 +22,7 @@ const HowItWorks = () => {
       number: "03",
       icon: <Sparkles className="w-8 h-8 text-primary" />,
       title: "Professional Clean",
-      description: "Your items receive thorough, professional cleaning using specialized equipment and techniques.",
+      description: "Your items receive thorough, professional cleaning using specialised equipment and techniques.",
       action: "Deep cleaning at our facility"
     },
     {
