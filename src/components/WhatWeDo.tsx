@@ -1,32 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Shirt, Shield, Home } from "lucide-react";
-
 const WhatWeDo = () => {
-  const services = [
-    {
-      icon: <Home className="w-8 h-8 text-primary" />,
-      title: "Area Rugs",
-      description: "Persian, Oriental, modern rugs, and runners of all sizes. Professional cleaning that preserves fibers and colors."
-    },
-    {
-      icon: <Shirt className="w-8 h-8 text-primary" />,
-      title: "Heavy Bedding",
-      description: "Quilts, doonas, comforters, and thick blankets. Items too bulky for home washing machines."
-    },
-    {
-      icon: <Sparkles className="w-8 h-8 text-primary" />,
-      title: "Deep Cleaning",
-      description: "Professional-grade equipment removes deep-set dirt, allergens, and odors that regular cleaning can't reach."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-primary" />,
-      title: "Fiber Protection",
-      description: "Specialized techniques for delicate materials. We protect your investment with proper care methods."
-    }
-  ];
-
-  return (
-    <section id="what-we-do" className="section-padding bg-background">
+  const services = [{
+    icon: <Home className="w-8 h-8 text-primary" />,
+    title: "Area Rugs",
+    description: "Persian, Oriental, modern rugs, and runners of all sizes. Professional cleaning that preserves fibers and colors."
+  }, {
+    icon: <Shirt className="w-8 h-8 text-primary" />,
+    title: "Heavy Bedding",
+    description: "Quilts, doonas, comforters, and thick blankets. Items too bulky for home washing machines."
+  }, {
+    icon: <Sparkles className="w-8 h-8 text-primary" />,
+    title: "Deep Cleaning",
+    description: "Professional-grade equipment removes deep-set dirt, allergens, and odors that regular cleaning can't reach."
+  }, {
+    icon: <Shield className="w-8 h-8 text-primary" />,
+    title: "Fiber Protection",
+    description: "Specialized techniques for delicate materials. We protect your investment with proper care methods."
+  }];
+  return <section id="what-we-do" className="section-padding bg-background">
       <div className="container mx-auto container-padding">
         <div className="max-w-6xl mx-auto content-spacing-lg animate-fade-in">
           {/* Header */}
@@ -34,16 +26,12 @@ const WhatWeDo = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               What We Do
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We specialize in cleaning items that are too large, delicate, or valuable 
-              for standard home washing. Professional results you can trust.
-            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">We specialise in cleaning items that are too large, delicate, or valuable for standard home washing. Professional results you can trust.</p>
           </div>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <Card key={index} className="bg-card border-border shadow-card hover:shadow-soft transition-all duration-300 hover:transform hover:scale-105">
+            {services.map((service, index) => <Card key={index} className="bg-card border-border shadow-card hover:shadow-soft transition-all duration-300 hover:transform hover:scale-105">
                 <CardContent className="p-6 text-center">
                   <div className="flex justify-center mb-4">
                     {service.icon}
@@ -55,8 +43,7 @@ const WhatWeDo = () => {
                     {service.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Additional Info */}
@@ -83,8 +70,6 @@ const WhatWeDo = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhatWeDo;
