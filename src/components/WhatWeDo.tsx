@@ -4,7 +4,7 @@ const WhatWeDo = () => {
   const services = [{
     icon: <Home className="w-8 h-8 text-primary" />,
     title: "Area Rugs",
-    description: "Persian, Oriental, modern rugs, and runners of all sizes. Professional cleaning that preserves fibers and colors."
+    description: "Persian, Oriental, modern rugs, and runners of all sizes. Professional cleaning that preserves fibres and colours."
   }, {
     icon: <Shirt className="w-8 h-8 text-primary" />,
     title: "Heavy Bedding",
@@ -12,7 +12,7 @@ const WhatWeDo = () => {
   }, {
     icon: <Sparkles className="w-8 h-8 text-primary" />,
     title: "Deep Cleaning",
-    description: "Professional-grade equipment removes deep-set dirt, allergens, and odors that regular cleaning can't reach."
+    description: "Professional-grade equipment removes deep-set dirt, allergens, and odours that regular cleaning can't reach."
   }, {
     icon: <Shield className="w-8 h-8 text-primary" />,
     title: "Fiber Protection",
