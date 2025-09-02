@@ -126,24 +126,16 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Bottom Section */}
-          <div className="border-t border-hero-foreground/20 mt-8 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-hero-foreground/60 text-sm">
-                © {currentYear} RugHub Kalgoorlie. All rights reserved.
-              </p>
-              <div className="flex gap-6 text-sm">
-                <a href="#" className="text-hero-foreground/60 hover:text-primary transition-colors">
-                  Privacy Policy
-                </a>
-                <a href="#" className="text-hero-foreground/60 hover:text-primary transition-colors">
-                  Terms of Service
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>;
+{/* Bottom Section */}
+<div className="border-t border-hero-foreground/20 mt-8 pt-8">
+  <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+    <p className="text-hero-foreground/60 text-sm">
+      © {currentYear} RugHub Kalgoorlie. All rights reserved.
+    </p>
+  </div>
+</div>
+</div>
+</div>
+</footer>;
 };
 export default Footer;
