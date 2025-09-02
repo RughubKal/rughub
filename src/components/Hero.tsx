@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Star } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import logo from "@/assets/logo.png";
+
 const Hero = () => {
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({
@@ -20,11 +22,13 @@ const Hero = () => {
           <div className="max-w-4xl mx-auto text-center">
             {/* Logo/Brand */}
             <div className="mb-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  RugHub
-                </span>
-              </h1>
+              <div className="flex justify-center mb-4">
+                <img 
+                  src={logo}
+                  alt="RugHub Logo"
+                  className="h-20 sm:h-24 lg:h-32 w-auto"
+                />
+              </div>
               <p className="text-xl sm:text-2xl text-hero-foreground/90 font-light">
                 Kalgoorlie
               </p>
