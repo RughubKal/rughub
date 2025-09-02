@@ -95,6 +95,14 @@ const Footer = () => {
               }}>
                   Contact
                 </a>
+                <a 
+                  href="https://goldfieldsmats.com.au" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-hero-foreground/70 hover:text-primary transition-colors"
+                >
+                  Mats ?
+                </a>
               </nav>
             </div>
 
