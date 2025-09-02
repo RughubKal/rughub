@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +46,11 @@ const Navigation = () => {
             onClick={() => scrollToSection("hero")}
             className="absolute left-0 text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:opacity-80 transition-opacity"
           >
-            RugHub
+            <img 
+              src={logo} 
+              alt="RugHub Logo" 
+              className="h-8 w-auto"
+            />
           </button>
 
           {/* Desktop Navigation - Centered */}
