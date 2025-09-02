@@ -127,7 +127,7 @@ export default async function handler(req, res) {
 
     // Send email using Resend
     const data = await resend.emails.send({
-      from: 'RugHub Contact Form <noreply@rughubkal.com.au>',
+      from: 'RugHub Contact Form <noreply@contact.rughubkal.com.au>',
       to: ['admin@rughubkal.com.au'],
       subject: `RugHub Service Inquiry - ${service || 'General'}`,
       html: `
