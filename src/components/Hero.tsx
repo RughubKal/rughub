@@ -29,7 +29,7 @@ const Hero = () => {
                   className="h-20 sm:h-24 lg:h-32 w-auto"
                 />
             </div>
-
+          </div>
             {/* Tagline */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 leading-tight">
               Kalgoorlie's Rug & Bedding Cleaning Specialists
