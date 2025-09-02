@@ -29,8 +29,6 @@ const Hero = () => {
                   className="h-20 sm:h-24 lg:h-32 w-auto"
                 />
               </div>
-              <p className="text-xl sm:text-2xl text-hero-foreground/90 font-light">
-                Kalgoorlie
               </p>
             </div>
 
