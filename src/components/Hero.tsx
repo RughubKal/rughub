@@ -28,7 +28,6 @@ const Hero = () => {
                   alt="RugHub Logo"
                   className="h-20 sm:h-24 lg:h-32 w-auto"
                 />
-              </div>
               </p>
             </div>
 
