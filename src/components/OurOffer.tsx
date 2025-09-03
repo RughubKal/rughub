@@ -13,7 +13,7 @@ const OurOffer = () => {
     const w = parseFloat(width);
     if (!l || !w || l <= 0 || w <= 0) return null;
     const sqm = l * w;
-    const price = sqm * 25; // $25 per sqm base rate
+    const price = sqm * 27.50; // $27.5 per sqm base rate including GST
 
     return {
       sqm: sqm.toFixed(1),
@@ -54,7 +54,7 @@ const OurOffer = () => {
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-primary mb-2">
-                    $25
+                    $27.50
                   </div>
                   <p className="text-muted-foreground">starting from</p>
                 </div>
@@ -84,7 +84,7 @@ const OurOffer = () => {
                       </div>
                       <div className="text-center">
                         <div className="text-lg font-bold text-primary">
-                          Estimated: ${calculation.price}
+                          Estimated from: ${calculation.price}
                         </div>
                         
                       </div>
